@@ -1,0 +1,146 @@
+.body {
+  margin: 0;
+  padding: 0;
+  color: var(--main-color);
+  font-family: 'Source Sans Pro';
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 1112px;
+  min-height: calc(100vh - 200px);
+  margin: 0 auto;
+  padding-top: 32px;
+  padding-bottom: 96px;
+  padding-left: 32px;
+  padding-right: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 20;
+}
+
+.section {
+  position: relative;
+}
+
+.section::before,
+.section::after {
+  content: '';
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: skewY(-2deg);
+  transform-origin: 0 0;
+  z-index: 10;
+}
+
+.section::after {
+  background-color: #fff;
+  transform-origin: 100% top;
+}
+
+
+.section-title {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 48px;
+  margin: 0 auto;
+  margin-bottom: 112px;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.section-title::before,
+.section-title::after {
+  content: '';
+  display: block;
+  background-color: var(--main-color);
+  height: 4px;
+  min-width: 10vw;
+
+}
+
+.section-title::before {
+  margin-right: 2vw;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+.section-title::after {
+  margin-left: 2vw;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+
+.row-two-column {
+  display: flex;
+}
+
+.row-two-column > .column-one {
+  flex: 1 1 50%;
+  margin-right: 16px;
+}
+
+.row-two-column > .column-two {
+  flex: 1 1 50%;
+  margin-left: 16px;
+}
+
+
+.media-dot {
+  background: url(../../assets/img/dot.png) repeat 0px 0px;
+  background-size: 5px;
+  background-attachment: fixed;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+
+
+.svg.icon-down-arrow {
+  width: 64px;
+  display: block;
+  position: absolute;
+  right: 50%;
+  left: 50%;
+  fill: var(--light-gray);
+  opacity: .4;
+  transition: opacity .3s ease-in,
+              transform .3s ease-in;
+}
+
+.icon-down-arrow:hover {
+  opacity: .6;
+  transform: scale(1.1)
+}
+
+
+@media screen and (max-width: 760px) {
+  .container {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+
+@media screen and (max-width: 430px) {
+  .container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .section-title::before,
+  .section-title::after {
+    display: none;
+  }
+}

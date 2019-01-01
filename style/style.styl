@@ -1,0 +1,78 @@
+// Variables
+:root {
+  --light-gray: #f2f2f2;
+  --light-gray-t: 242, 242, 242;
+
+  --mid-gray: #8b8c8f;
+  --mid-gray-t: 139, 140, 143;
+
+  --main-color: #3E3F44;
+  --main-color-t: 62, 63, 68;
+
+  --main-color-dark: #2F2F33;
+  --main-color-dark-t: 47, 47, 51;
+
+  --secondary-color: #d36233;
+  --secondary-color-t: 211, 98, 51;
+
+
+  // Smooth Anchor Scrolling
+  scroll-behavior: smooth;
+}
+
+
+// General Style
+html {
+  box-sizing: border-box;
+}
+
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+
+.svg {
+  fill: var(--main-color)
+}
+
+
+.p {
+  text-indent: 16px;
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+}
+
+.p:first-of-type {
+  margin-top: 0px;
+}
+
+.p:last-of-type {
+  margin-bottom: 0px;
+}
+
+
+.a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+
+
+
+// @font-face import
+@import '../assets/fonts/permanent-marker/index.css';
+@import '../assets/fonts/source-sans-pro/index.css';
+
+
+
+// Partials import
+@import 'partials/layout.css';
+@import 'partials/header-and-video.css';
+@import 'partials/brand.css';
+@import 'partials/separator.css';
+@import 'partials/product';
+@import 'partials/events.css';
+@import 'partials/community.css';
+@import 'partials/footer.css';
